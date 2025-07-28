@@ -1,0 +1,14 @@
+pandas
+numpy
+scikit-learn
+matplotlib
+seaborn
+streamlit
+fpdf
+nltk
+textblob
+spacy
+prophet
+plotly
+geopandas
+folium
