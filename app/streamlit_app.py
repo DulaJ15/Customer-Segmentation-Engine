@@ -35,5 +35,11 @@ if uploaded_file is not None:
     st.dataframe(clustered_df.groupby('Cluster').mean())
 
     st.success("Clustering Complete. Persona report generation coming next...")
+
+    from utils.pdf_generator import PersonaPDF
+
+    pdf = PersonaPDF(cluster_id=cluster_id, persona_data=persona_summary, radar_chart_path=radar_path)
+    pdf.save(f"personas/persona_cluster_{cluster_id}.pdf")
+
 else:
     st.info("Please upload a CSV file to begin.")
